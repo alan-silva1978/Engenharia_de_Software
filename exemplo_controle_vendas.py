@@ -31,10 +31,16 @@ def produto_mais_caro(lista_vendas):
 
 # Usando as funções
 categorias = categorias_vendidas(vendas)
-print(f"\nCategorias: {categorias}")  # {'Eletrônicos', 'Acessórios'}
+print("\n==============================================")
+print(f"Categorias: {categorias}")  # {'Eletrônicos', 'Acessórios'}
+print("==============================================")
 
+print("\n==============================================")
 por_categoria = vendas_por_categoria(vendas)
-print(f"\nProdutos em Eletrônicos: {len(por_categoria['Eletrônicos'])}")
+print(f"Produtos em Eletrônicos: {len(por_categoria['Eletrônicos'])}")
+print("==============================================")
 
+print("\n==============================================")
 caro = produto_mais_caro(vendas)
-print(f"\nProduto mais caro: {caro['produto']} - R${caro['preco']:.2f}")
+print(f"Produto mais caro: {caro['produto']} - R${caro['preco']:.2f}")
+print("==============================================")
