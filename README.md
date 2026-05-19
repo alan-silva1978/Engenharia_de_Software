@@ -1,28 +1,25 @@
-# 🛡️ Arsenal Python
+# 💻 Portfólio de Engenharia de Software
 
-## 📌 Sobre o Repositório
-Este repositório atua como um arquivo central (Arsenal) para os códigos, algoritmos e projetos desenvolvidos durante o 1º semestre do curso de Engenharia de Software. O objetivo é registrar o progresso lógico, a aplicação de boas práticas de programação (PEP 8) e a evolução na sintaxe da linguagem Python.
+Bem-vindo ao meu repositório central de desenvolvimento. Este espaço é dedicado à organização e documentação de todos os códigos, algoritmos e sistemas desenvolvidos durante a minha formação em Engenharia de Software.
+
+## 🗂️ Arquitetura do Repositório
+
+O repositório está estruturado do macro para o micro, dividindo-se por disciplinas e atividades práticas (EPs):
+
+* **📁 Disciplinas/**
+  * **`04 - Programacao_de_Computadores/`**
+    * `EP1_Fundamentos/`: Códigos introdutórios, calculadoras e lógica básica.
+    * `EP2_Gestao_de_Estoque/`: Algoritmos de controle e gerenciamento de inventário.
+    * `EP3_Jogo_da_Forca/`: Desenvolvimento de um jogo completo utilizando laços de repetição e condicionais.
+    * `EP4_Sistema_de_Notas/`: Sistema modular robusto com testes automatizados (QA) e tratamento de exceções (Edge Cases).
+
+* **📁 Testes_e_Treinamentos/**
+  * Ambiente de testes independentes ("Estande de Tiro"), contendo experimentos lógicos, simulações de sistemas (como viaturas e munição) e rascunhos de estudo contínuo.
+
+## 🛠️ Tecnologias e Boas Práticas
+* **Linguagem Principal:** Python 3
+* **Boas Práticas:** Clean Code, SRP (Princípio da Responsabilidade Única), PEP 8.
+* **Qualidade de Software:** Cobertura de testes unitários utilizando a biblioteca nativa `unittest`.
 
 ---
-
-## 📂 Projetos e Scripts Contidos
-
-### 🎮 1. Jogo da Forca (EP3)
-**Arquivo:** `jogo_forca.py`
-Projeto modularizado de um Jogo da Forca executado via terminal. 
-* **Arquitetura:** Código dividido em funções específicas (`inicializar_jogo`, `processar_tentativa`) operando em um laço `while`.
-* **Destaques:** Uso de conjuntos (`set`) para registrar letras tentadas (complexidade O(1)), blindagem de *inputs* de usuário e formatação limpa de terminal.
-
-### ⚖️ 2. Teste de IMC
-**Arquivo:** `Teste_IMC.py`
-Algoritmo estruturado para recebimento de dados (peso e altura), conversão de tipos (float) e processamento condicional (`if/elif/else`) para retornar o Índice de Massa Corporal do usuário.
-
-### 🧪 3. Outros Testes e Algoritmos
-*(Arquivos menores de testes lógicos e exercícios de fixação poderão ser adicionados futuramente nesta seção).*
-
----
-
-## 🚀 Tecnologias e Ferramentas
-* **Linguagem:** Python 3.x
-* **Versionamento:** Git e GitHub
-* **Ambiente (IDE):** Visual Studio Code
+*Repositório mantido com rigor técnico e foco em escalabilidade.*
