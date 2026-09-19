@@ -1,0 +1,179 @@
+<svg xmlns="http://w3.org" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Estilo Global -->
+    <style>
+      .outline { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .filled-glass { fill: #E0E0E0; stroke: #000000; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .shadow-detail { stroke: #4A4A4A; stroke-width: 1; fill: none; }
+    </style>
+  </defs>
+
+   <g transform="translate(10, 0)">
+    <!-- ========================================== -->
+    <!-- 1. VISTA SUPERIOR (CENTRAL)                -->
+    <!-- ========================================== -->
+    <g id="top-view">
+      <!-- Carroceria Principal -->
+      <path class="outline" d="M 215,75 
+                               C 200,77 175,90 165,130 
+                               C 155,170 160,210 165,240 
+                               L 165,370 
+                               C 165,395 175,405 210,407 
+                               L 270,407 
+                               C 305,405 315,395 315,370 
+                               L 315,240 
+                               C 320,210 325,170 315,130 
+                               C 305,90 280,77 265,75 Z" />
+      
+      <!-- Para-brisa Dianteiro -->
+      <path class="filled-glass" d="M 210,85 
+                                   C 195,110 172,145 168,160 
+                                   L 312,160 
+                                   C 308,145 285,110 270,85 Z" />
+      
+      <!-- Capô / Linhas do Teto -->
+      <path class="outline" d="M 168,160 C 180,215 180,350 180,380" />
+      <path class="outline" d="M 312,160 C 300,215 300,350 300,380" />
+      <line class="outline" x1="180" y1="225" x2="300" y2="225" />
+      <line class="outline" x1="180" y1="315" x2="300" y2="315" />
+      
+      <!-- Vidro Traseiro -->
+      <path class="filled-glass" d="M 180,380 C 180,392 195,402 215,403 L 265,403 C 285,402 300,392 300,380 Z" />
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 2. VISTA DIANTEIRA (TOPO)                  -->
+    <!-- ========================================== -->
+    <g id="front-view" transform="translate(0, -5)">
+      <!-- Contorno do Para-choque e Grade -->
+      <path class="outline" d="M 155,55 
+                               C 155,60 160,65 185,68 
+                               L 295,68 
+                               C 320,65 325,60 325,55 
+                               L 323,30 
+                               C 323,20 310,13 285,12 
+                               L 195,12 
+                               C 170,13 157,20 157,30 Z" />
+      
+      <!-- Para-brisa (Perspectiva Frontal) -->
+      <path class="outline" d="M 180,18 C 190,32 290,32 300,18" />
+      
+      <!-- Faróis Esquerdo -->
+      <ellipse cx="175" cy="40" rx="12" ry="6" class="outline" transform="rotate(-5, 175, 40)" />
+      <circle cx="180" cy="40" r="3" class="outline" />
+      <!-- Faróis Direito -->
+      <ellipse cx="305" cy="40" rx="12" ry="6" class="outline" transform="rotate(5, 305, 40)" />
+      <circle cx="300" cy="40" r="3" class="outline" />
+      
+      <!-- Grade Inferior e Placa -->
+      <rect x="210" y="45" width="60" height="12" rx="3" class="outline" />
+      <line class="outline" x1="165" y1="52" x2="200" y2="52" />
+      <line class="outline" x1="280" y1="52" x2="315" y2="52" />
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 3. VISTA LATERAL ESQUERDA                  -->
+    <!-- ========================================== -->
+    <g id="left-view">
+      <!-- Silhueta da Carroceria Girada/Angulada -->
+      <path class="outline" d="M 154,115 
+                               C 142,108 122,86 112,96 
+                               C 102,106 90,140 88,155 
+                               L 88,345 
+                               C 88,360 92,390 102,400 
+                               C 112,410 135,412 148,405" />
+      
+      <!-- Rodas Esquerdas -->
+      <!-- Dianteira -->
+      <circle cx="78" cy="138" r="28" class="outline" />
+      <circle cx="78" cy="138" r="16" class="outline" />
+      <!-- Traseira -->
+      <circle cx="78" cy="342" r="28" class="outline" />
+      <circle cx="78" cy="342" r="16" class="outline" />
+      
+      <!-- Recortes do Alojamento das Rodas (Paralamas) -->
+      <path class="outline" d="M 88,110 C 60,110 60,166 88,166" />
+      <path class="outline" d="M 88,314 C 60,314 60,370 88,370" />
+      
+      <!-- Vidros Laterais Esquerdos -->
+      <!-- Vidro Dianteiro -->
+      <path class="filled-glass" d="M 148,158 C 144,175 140,210 138,230 L 118,230 C 118,200 126,175 140,160 Z" />
+      <!-- Vidro Traseiro -->
+      <path class="filled-glass" d="M 137,236 C 135,260 132,300 128,322 C 120,320 115,305 116,285 L 117,236 Z" />
+      
+      <!-- Linhas das Portas e Maçanetas -->
+      <path class="outline" d="M 152,233 L 105,233" />
+      <path class="outline" d="M 144,328 C 120,332 108,330 102,330" />
+      <circle cx="126" cy="245" r="2" class="outline" />
+      <circle cx="122" cy="338" r="2" class="outline" />
+      
+      <!-- Espelho Retrovisor Esquerdo -->
+      <path class="outline" d="M 148,162 C 158,160 162,170 150,174 Z" />
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 4. VISTA LATERAL DIREITA                   -->
+    <!-- ========================================== -->
+    <g id="right-view">
+      <!-- Silhueta da Carroceria Girada/Angulada -->
+      <path class="outline" d="M 326,115 
+                               C 338,108 358,86 368,96 
+                               C 378,106 390,140 392,155 
+                               L 392,345 
+                               C 392,360 388,390 378,400 
+                               C 368,410 345,412 332,405" />
+      
+      <!-- Rodas Direitas -->
+      <!-- Dianteira -->
+      <circle cx="402" cy="138" r="28" class="outline" />
+      <circle cx="402" cy="138" r="16" class="outline" />
+      <!-- Traseira -->
+      <circle cx="402" cy="342" r="28" class="outline" />
+      <circle cx="402" cy="342" r="16" class="outline" />
+      
+      <!-- Recortes do Alojamento das Rodas (Paralamas) -->
+      <path class="outline" d="M 392,110 C 420,110 420,166 392,166" />
+      <path class="outline" d="M 392,314 C 420,314 420,370 392,370" />
+      
+      <!-- Vidros Laterais Direitos -->
+      <!-- Vidro Dianteiro -->
+      <path class="filled-glass" d="M 332,158 C 336,175 340,210 342,230 L 362,230 C 362,200 354,175 340,160 Z" />
+      <!-- Vidro Traseiro -->
+      <path class="filled-glass" d="M 343,236 C 345,260 348,300 352,322 C 360,320 365,305 364,285 L 363,236 Z" />
+      
+      <!-- Linhas das Portas e Maçanetas -->
+      <path class="outline" d="M 328,233 L 375,233" />
+      <path class="outline" d="M 336,328 C 360,332 372,330 378,330" />
+      <circle cx="354" cy="245" r="2" class="outline" />
+      <circle cx="358" cy="338" r="2" class="outline" />
+      
+      <!-- Espelho Retrovisor Direito -->
+      <path class="outline" d="M 332,162 C 322,160 318,170 330,174 Z" />
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 5. VISTA TRASEIRA (BASE)                   -->
+    <!-- ========================================== -->
+    <g id="rear-view" transform="translate(0, 15)">
+      <!-- Contorno do Para-choque Traseiro e Porta-malas -->
+      <path class="outline" d="M 155,405 
+                               C 155,400 160,395 185,392 
+                               L 295,392 
+                               C 320,395 325,400 325,405 
+                               L 323,435 
+                               C 323,445 310,452 285,453 
+                               L 195,453 
+                               C 170,452 157,445 157,435 Z" />
+      
+      <!-- Vidro Traseiro (Perspectiva Traseira) -->
+      <path class="outline" d="M 180,442 C 190,428 290,428 300,442" />
+      
+      <!-- Lanternas Traseiras -->
+      <path class="filled-glass" d="M 160,400 C 165,395 180,398 180,405 C 180,412 165,410 160,400 Z" />
+      <path class="filled-glass" d="M 320,400 C 315,395 300,398 300,405 C 300,412 315,410 320,400 Z" />
+      
+      <!-- Placa Traseira -->
+      <rect x="215" y="415" width="50" height="15" rx="2" class="outline" />
+    </g>
+  </g>
+</svg>

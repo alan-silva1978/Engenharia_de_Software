@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo de Vida e Sinistros | SISGEF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Histórico Logístico e Inquéritos Técnicos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Voltar ao Hub</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="status-prontidao">
+            <h2>Visão Estratégica: Status de Prontidão</h2>
+            <article>
+                <h3>Viatura ALFA-01</h3>
+                <p>Em patrulhamento -- última vistoria registrada há 2 horas.</p>
+            </article>
+            <article>
+                <h3>Viatura BRAVO-03</h3>
+                <p>Em patrulhamento -- sem sinistros reportados no turno atual.</p>
+            </article>
+        </section>
+
+        <section id="vistoria-lataria">
+            <h2>Mapeamento Estrutural da Viatura</h2>
+
+            <!-- INSERIR AQUI: Alerta visual de dano -->
+            <div class="alerta-caixa">
+                <strong>AVARIA CONSTATADA</strong>
+                <p>Dano estrutural identificado. Anexe a fotografia para subsidiar o Inquérito Técnico.</p>
+            </div>
+
+            <p>Utilize o esquema abaixo para identificar a área exata da avaria.</p>
+            <img src="assets/img/viatura.svg" alt="Esquema gráfico do veículo para marcação de sinistros na lataria" width="600" height="424">
+
+            <form action="/submit" method="POST">
+                <fieldset>
+                    <legend>Registro Tático de Avarias e Sinistros</legend>
+                    <label for="viatura-id">Identificação da Viatura:</label>
+                    <input type="text" id="viatura-id" name="viatura-id" required>
+
+                    <label for="descricao-avaria">Descrição da Avaria:</label>
+                    <input type="text" id="descricao-avaria" name="descricao-avaria" required>
+                </fieldset>
+                <button type="submit">Registrar Sinistro</button>
+            </form>
+        </section>
+
+        <section id="historico-it">
+            <h2>Histórico de Inquéritos Técnicos (IT)</h2>
+            <details>
+                <summary>IT nº 014/2026 - Viatura CHARLIE-07</summary>
+                <p>Avaria de lataria registrada e encaminhada para perícia técnica.</p>
+            </details>
+            <details>
+                <summary>IT nº 009/2026 - Viatura ALFA-01</summary>
+                <p>Sinistro de menor gravidade, processo arquivado.</p>
+            </details>
+        </section>
+
+        <aside id="logs-manutencao">
+            <h2>Logs de Manutenção e Cold Storage</h2>
+            <ul>
+                <li><a href="#">Fotos arquivadas - Viatura ALFA-01 (2025)</a></li>
+                <li><a href="#">Fotos arquivadas - Viatura BRAVO-03 (2025)</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- INSERIR AQUI: Modal de confirmação (Barreira de segurança contra toques acidentais) -->
+    <div class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2>Encerrar Turno?</h2>
+            <p>Tem certeza que deseja fechar o diário da viatura ALFA-01? Esta ação é irreversível.</p>
+            <button class="btn-modal">CONFIRMAR ENCERRAMENTO</button>
+        </div>
+    </div>
+</body>
+</html>
