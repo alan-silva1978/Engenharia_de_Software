@@ -1,0 +1,86 @@
+/* Reset universal: padding e borda passam a contar DENTRO da altura/largura declarada */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* --- Ajuste Estrutural do Rodapé --- */
+body {
+    margin: 0; /* Aniquila a margem fantasma do navegador */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1; /* Força o "chassi" a expandir e empurrar o rodapé */
+}
+footer {
+    margin-top: auto;
+}
+
+/* Arquitetura do Design System (Cores Institucionais) */
+:root {
+    --cor-primaria-caqui: #C2B280;
+    --cor-secundaria-marrom: #4B3621;
+    --cor-alerta-vermelho: #B00020;
+    --cor-sucesso-verde: #34C759;
+}
+body { font-family: sans-serif; padding: 20px; background-color: #F5F5F5; }
+
+/* Badges (Etiquetas Semânticas de Status) */
+.badge { padding: 6px 12px; border-radius: 20px; font-weight: bold; color: white; display: inline-block; font-size: 14px;}
+.badge-ativo { background-color: var(--cor-sucesso-verde); }
+.badge-alerta { background-color: var(--cor-alerta-vermelho); }
+
+/* Caixa de Alerta (Feedback de Erro) */
+.alerta-caixa { border-left: 6px solid var(--cor-alerta-vermelho); background-color: white; padding: 16px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 4px;}
+.alerta-caixa strong { color: var(--cor-alerta-vermelho); font-size: 1.2rem; }
+
+/* Toast (Notificação Rápida de Sucesso) */
+.toast { background-color: var(--cor-secundaria-marrom); color: white; padding: 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; max-width: 400px; margin: 20px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+
+/* Modal (Popup de Confirmação de Encerramento) */
+.modal-fundo { background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 8px; display: inline-block; }
+.modal-conteudo { background-color: white; padding: 24px; border-radius: 8px; text-align: center; max-width: 300px; }
+.btn-modal { background-color: var(--cor-secundaria-marrom); color: white; padding: 16px 24px; border: none; border-radius: 4px; font-weight: bold; margin-top: 16px; width: 100%; cursor: pointer;}
+
+/* --- Validação Visual de Formulários --- */
+.input-erro {
+    border: 2px solid #e74c3c !important;
+    background-color: #fdedec;
+}
+.input-sucesso {
+    border: 2px solid #27ae60 !important;
+    background-color: #eafaf1;
+}
+.mensagem-erro {
+    color: #e74c3c;
+    font-size: 0.85em;
+    font-weight: bold;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* --- Otimização de Viewport e Compactação do Cabeçalho --- */
+header {
+    padding-bottom: 10px; /* Reduz espaço ocioso no fundo do cabeçalho */
+}
+header img {
+    max-height: 100px; /* Reduz a altura do brasão da ONG para não empurrar a tela */
+    width: auto;
+    margin-bottom: -15px; /* Puxa o título um pouco mais para cima */
+}
+
+/* Cartões de Voluntários Cadastrados (Lista Dinâmica) */
+.lista-cards-voluntarios { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
+.card-voluntario {
+    background-color: white;
+    border-left: 5px solid var(--cor-primaria-caqui);
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 200px;
+}
