@@ -26,6 +26,13 @@ footer {
 }
 body { font-family: sans-serif; padding: 20px; background-color: #F5F5F5; }
 
+/* --- Navegação por Teclado (Foco Visual WCAG) --- */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--cor-secundaria-marrom);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 /* Badges (Etiquetas Semânticas de Status) */
 .badge { padding: 6px 12px; border-radius: 20px; font-weight: bold; color: white; display: inline-block; font-size: 14px;}
 .badge-ativo { background-color: var(--cor-sucesso-verde); }
@@ -45,7 +52,7 @@ body { font-family: sans-serif; padding: 20px; background-color: #F5F5F5; }
 
 /* --- Validação Visual de Formulários --- */
 .input-erro {
-    border: 2px solid #e74c3c !important;
+    border: 2px solid var(--cor-alerta-vermelho) !important;
     background-color: #fdedec;
 }
 .input-sucesso {
@@ -53,7 +60,7 @@ body { font-family: sans-serif; padding: 20px; background-color: #F5F5F5; }
     background-color: #eafaf1;
 }
 .mensagem-erro {
-    color: #e74c3c;
+    color: var(--cor-alerta-vermelho);
     font-size: 0.85em;
     font-weight: bold;
     display: block;

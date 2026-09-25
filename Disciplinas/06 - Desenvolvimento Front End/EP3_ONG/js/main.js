@@ -17,7 +17,7 @@ function renderizarRota() {
     if (rotaAtiva === '#home') {
         appContainer.innerHTML = `
             <section id="sobre" style="text-align: center; padding: 20px;">
-                <h2>Bem-vindo à ONG Ação e Vida</h2>
+                <h2 id="titulo-secao">Bem-vindo à ONG Ação e Vida</h2>
                 <p style="font-size: 1.1em; margin-bottom: 20px;">Trabalhamos para levar esperança, suprimentos e apoio logístico para comunidades em situação de vulnerabilidade.</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="#acoes" style="padding: 12px 24px; text-decoration: none; background-color: #3498db; color: white; border-radius: 5px; font-weight: bold;">Conheça Nossas Ações</a>
@@ -29,7 +29,7 @@ function renderizarRota() {
     else if (rotaAtiva === '#acoes') {
         appContainer.innerHTML = `
             <section id="painel-acoes">
-                <h2>O Nosso Impacto Social</h2>
+                <h2 id="titulo-secao">O Nosso Impacto Social</h2>
                 <article style="background-color: #f9f9f9; padding: 15px; margin-bottom: 15px; border-left: 5px solid #27ae60;">
                     <h3>Distribuição de Alimentos (Em Andamento)</h3>
                     <p>Atuamos na linha de frente garantindo a segurança alimentar de 500 famílias cadastradas na região metropolitana.</p>
@@ -43,7 +43,7 @@ function renderizarRota() {
     else if (rotaAtiva === '#voluntarios') {
         appContainer.innerHTML = `
             <section id="cadastro-voluntario">
-                <h2>Cadastro de Novos Voluntários</h2>
+                <h2 id="titulo-secao">Cadastro de Novos Voluntários</h2>
                 <form id="form-cadastro">
                     <fieldset>
                         <legend>Dados Pessoais</legend>
@@ -51,10 +51,12 @@ function renderizarRota() {
                         <input type="text" id="nome" placeholder="Digite seu nome completo" required>
 
                         <label for="cpf" id="label-cpf">CPF (Apenas números):</label>
-                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" aria-describedby="cpf-erro" required>
+                        <span id="cpf-erro" class="mensagem-erro" role="alert"></span>
 
                         <label for="telefone">Telefone de Contato:</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" aria-describedby="telefone-erro" required>
+                        <span id="telefone-erro" class="mensagem-erro" role="alert"></span>
 
                         <label for="area">Área de Atuação de Interesse:</label>
                         <select id="area" name="area">
@@ -73,10 +75,11 @@ function renderizarRota() {
     else if (rotaAtiva === '#login') {
         appContainer.innerHTML = `
             <section id="autenticacao" style="max-width: 400px; margin: 0 auto; text-align: center;">
-                <h2>Área Restrita</h2>
+                <h2 id="titulo-secao">Área Restrita</h2>
                 <form id="form-login">
                     <label for="cpf-login" style="text-align: left;">CPF Operacional:</label>
-                    <input type="text" id="cpf-login" required style="margin-bottom: 15px;">
+                    <input type="text" id="cpf-login" required style="margin-bottom: 15px;" aria-describedby="cpf-login-erro">
+                    <span id="cpf-login-erro" class="mensagem-erro" role="alert"></span>
                     <label for="senha" style="text-align: left;">Senha de Acesso:</label>
                     <input type="password" id="senha" required style="margin-bottom: 20px;">
                     <button type="submit" style="background-color: #e74c3c;">Autenticar e Assumir Turno</button>
@@ -87,7 +90,7 @@ function renderizarRota() {
     else if (rotaAtiva === '#diario') {
         appContainer.innerHTML = `
             <section id="formulario-registro">
-                <h2>Diário de Distribuições</h2>
+                <h2 id="titulo-secao">Diário de Distribuições</h2>
 
                 <!-- PELOTÃO 1: REGISTRO DO TURNO -->
                 <form id="form-diario" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #ccc;">
@@ -128,6 +131,13 @@ function renderizarRota() {
     // ACIONANDO OS PELOTÕES APÓS A RENDERIZAÇÃO
     aplicarMascaras();
     configurarFormularios();
+
+        // --- GESTÃO DE FOCO: acessibilidade na troca de rota da SPA ---
+    const tituloFoco = appContainer.querySelector('#titulo-secao');
+    if (tituloFoco) {
+        tituloFoco.setAttribute('tabindex', '-1');
+        tituloFoco.focus();
+    }
 }
 
 window.addEventListener('hashchange', renderizarRota);
