@@ -21,7 +21,7 @@ function renderizarRota() {
                 <p style="font-size: 1.1em; margin-bottom: 20px;">Trabalhamos para levar esperança, suprimentos e apoio logístico para comunidades em situação de vulnerabilidade.</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="#acoes" style="padding: 12px 24px; text-decoration: none; background-color: #3498db; color: white; border-radius: 5px; font-weight: bold;">Conheça Nossas Ações</a>
-                    <a href="#voluntarios" style="padding: 12px 24px; text-decoration: none; background-color: #27ae60; color: white; border-radius: 5px; font-weight: bold;">Quero ser Voluntário</a>
+                    <a href="#voluntarios" style="padding: 12px 24px; text-decoration: none; background-color: #1a7a42; color: white; border-radius: 5px; font-weight: bold;">Quero ser Voluntário</a>
                 </div>
             </section>
         `;
@@ -30,7 +30,7 @@ function renderizarRota() {
         appContainer.innerHTML = `
             <section id="painel-acoes">
                 <h2 id="titulo-secao">O Nosso Impacto Social</h2>
-                <article style="background-color: #f9f9f9; padding: 15px; margin-bottom: 15px; border-left: 5px solid #27ae60;">
+                <article style="background-color: #f9f9f9; padding: 15px; margin-bottom: 15px; border-left: 5px solid #1a7a42;">
                     <h3>Distribuição de Alimentos (Em Andamento)</h3>
                     <p>Atuamos na linha de frente garantindo a segurança alimentar de 500 famílias cadastradas na região metropolitana.</p>
                 </article>
@@ -82,7 +82,7 @@ function renderizarRota() {
                     <span id="cpf-login-erro" class="mensagem-erro" role="alert"></span>
                     <label for="senha" style="text-align: left;">Senha de Acesso:</label>
                     <input type="password" id="senha" required style="margin-bottom: 20px;">
-                    <button type="submit" style="background-color: #e74c3c;">Autenticar e Assumir Turno</button>
+                    <button type="submit" style="background-color: #B00020; color: white;">Autenticar e Assumir Turno</button>
                 </form>
             </section>
         `;
@@ -115,7 +115,7 @@ function renderizarRota() {
                         <div id="lista-ocorrencias-ativas"></div>
 
                         <details style="margin-top: 15px; padding: 10px; background-color: #f9f9f9; border-radius: 5px;">
-                            <summary style="font-weight: bold; color: #e74c3c; cursor: pointer;">+ Reportar Nova Ocorrência</summary>
+                            <summary style="font-weight: bold; color: #B00020; cursor: pointer;">+ Reportar Nova Ocorrência</summary>
 
                             <label for="descricao-ocorrencia">Descrição da Ocorrência:</label>
                             <input type="text" id="descricao-ocorrencia" placeholder="Ex: Alimento com validade vencida">
