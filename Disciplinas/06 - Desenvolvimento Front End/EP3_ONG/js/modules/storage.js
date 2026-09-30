@@ -25,14 +25,14 @@ function renderizarListaOcorrencias() {
     const ocorrencias = dadosSalvos.ocorrencias || [];
 
     if (ocorrencias.length === 0) {
-        listaDiv.innerHTML = '<div style="padding: 10px; background-color: #eafaf1; border-left: 5px solid #27ae60; color: #27ae60;"><strong>Turno em conformidade.</strong> Nenhuma ocorrência ativa registrada.</div>';
+        listaDiv.innerHTML = '<div style="padding: 10px; background-color: #eafaf1; border-left: 5px solid #1a7a42; color: #1a7a42;"><strong>Turno em conformidade.</strong> Nenhuma ocorrência ativa registrada.</div>';
         return;
     }
 
     let html = '<ul style="list-style: none; padding: 0; margin: 0;">';
     ocorrencias.forEach((ocorrencia, index) => {
         html += `
-            <li style="background: #fdedec; padding: 10px; margin-bottom: 8px; border-radius: 4px; border-left: 5px solid #e74c3c; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <li style="background: #fdedec; padding: 10px; margin-bottom: 8px; border-radius: 4px; border-left: 5px solid #B00020; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                 <span style="flex: 1;"><strong>Ocorrência Ativa:</strong> ${ocorrencia}</span>
                 <button type="button" class="btn-excluir-ocorrencia" data-index="${index}" style="background: #c0392b; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85em;">Dar Baixa (Justificar)</button>
             </li>
@@ -113,7 +113,7 @@ export function inicializarListeners() {
                 input: 'text',
                 inputPlaceholder: 'Ex: Item retirado do estoque, ou Erro de registro...',
                 showCancelButton: true,
-                confirmButtonColor: '#27ae60',
+                confirmButtonColor: '#1a7a42',
                 cancelButtonColor: '#7f8c8d',
                 confirmButtonText: 'Confirmar Baixa',
                 cancelButtonText: 'Cancelar',

@@ -22,7 +22,7 @@ footer {
     --cor-primaria-caqui: #C2B280;
     --cor-secundaria-marrom: #4B3621;
     --cor-alerta-vermelho: #B00020;
-    --cor-sucesso-verde: #34C759;
+    --cor-sucesso-verde: #1a7a42;
 }
 body { font-family: sans-serif; padding: 20px; background-color: #F5F5F5; }
 
@@ -56,7 +56,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     background-color: #fdedec;
 }
 .input-sucesso {
-    border: 2px solid #27ae60 !important;
+    border: 2px solid #1a7a42 !important;
     background-color: #eafaf1;
 }
 .mensagem-erro {
